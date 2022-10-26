@@ -119,7 +119,8 @@ server {
 
 9. Reload NGINX configuration: `nginx -s reload`
 10. Visit the admin panel and prepare the database (e.g. client ids for dauth).
-11. Done!
+
+Done!
 
 ## Updating a service
 1. Pull the latest version from the git repository: `git pull`
