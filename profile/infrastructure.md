@@ -95,13 +95,24 @@ server {
 }
 ```
 
-If the service requires a client certificate, add the following lines:
+If the service requires a client certificate, it might look like this:
 ```
 server {
-    ...
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+
+    ssl_certificate /etc/letsencrypt/live/dauth-lp1.ndas.srv.nintendo-playground.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/dauth-lp1.ndas.srv.nintendo-playground.com/privkey.pem;
+
     ssl_client_certificate /etc/nginx/client-certs/NintendoNXCA2Prod1.pem;
     ssl_verify_client on;
-    ...
+
+    server_name dauth-lp1.ndas.srv.nintendo-playground.com;
+
+    location / {
+        proxy_pass http://localhost:10000;
+        proxy_set_header X-Device-Certificate $ssl_client_escaped_cert;
+    }
 }
 ```
 
