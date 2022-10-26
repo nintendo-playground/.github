@@ -9,7 +9,7 @@ Here are some examples that show why custom clients can be useful:
 * https://splatoon.oatmealdome.me/
 * https://www.mkdatabase.com/
 
-I also wanted to practice with web technology (see [infrastructure](https://github.com/nintendo-playground/.github/blob/main/profile/infrastructure.md)).
+I also wanted to practice with web technology (see [infrastructure](https://github.com/nintendo-playground/general/blob/main/Infrastructure.md)).
 
 ### Repositories
 * [Home page](https://github.com/nintendo-playground/home-page)
