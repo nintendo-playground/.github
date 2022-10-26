@@ -14,4 +14,4 @@ I also wanted to practice with web technology (see [infrastructure](https://gith
 ### Repositories
 * [Home page](https://github.com/nintendo-playground/home-page)
 * [Device authentication server](https://github.com/nintendo-playground/dauth-server)
-* Application authentication server (later)
+* [Application authentication server](https://github.com/nintendo-playground/aauth-server)
