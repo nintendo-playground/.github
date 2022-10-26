@@ -61,8 +61,9 @@ certbot certonly --nginx -d dadmin-lp1.ndas.mng.nintendo-playground.com
 ```
 
 3. Clone the git repository: `git clone https://github.com/nintendo-playground/dauth-server`
+4. Add missing files if necessary. For example, for the dauth server you must provide `prod.keys` and `dev.keys` yourself.
 
-4. Configure the service with `python3 scripts/configure.py`.
+5. Configure the service with `python3 scripts/configure.py`.
 ```
 Project name: dauth-playground-lp1
 Issuer (dauth): dauth-lp1.ndas.srv.nintendo.net
@@ -75,10 +76,10 @@ Password (dadmin): 8tywMwjIqFPgMuQV80EH-w
 Device type (cert): NX Prod 1
 ```
 
-5. Initialize the database if necessary: `flask db upgrade`
-6. Start the service: `docker compose up -d`
+6. Initialize the database if necessary: `flask db upgrade`
+7. Start the service: `docker compose up -d`
 
-7. Add the service to the NGINX configuration file. Most services look like this:
+8. Add the service to the NGINX configuration file. Most services look like this:
 ```
 server {
     listen 443 ssl http2;
@@ -116,9 +117,9 @@ server {
 }
 ```
 
-8. Reload NGINX configuration: `nginx -s reload`
-9. Visit the admin panel and prepare the database (e.g. client ids for dauth).
-10. Done!
+9. Reload NGINX configuration: `nginx -s reload`
+10. Visit the admin panel and prepare the database (e.g. client ids for dauth).
+11. Done!
 
 ## Updating a service
 1. Pull the latest version from the git repository: `git pull`
