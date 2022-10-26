@@ -76,7 +76,7 @@ Device type (cert): NX Prod 1
 ```
 
 5. Initialize the database if necessary: `flask db upgrade`
-6. Start the service: `docker compose up`
+6. Start the service: `docker compose up -d`
 
 7. Add the service to the NGINX configuration file. Most services look like this:
 ```
@@ -125,6 +125,6 @@ server {
 2. Rebuild the docker images: `docker compose build`
 3. Stop the service: `docker compose down`
 4. Update the database: `flask db upgrade`
-5. Restart the service: `docker compose up`
+5. Restart the service: `docker compose up -d`
 
 Step 3 and 4 can usually be skipped.
